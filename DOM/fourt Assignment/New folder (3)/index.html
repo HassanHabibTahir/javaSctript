@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <style>
+        .box {
+
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        img {
+            width: 200px;
+            padding: 4px;
+        }
+
+        #oDishes {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #netVlue {
+            float: right;
+            margin-right: 200px;
+            margin-top: 80px;
+            color: blue;
+            font-size: 20px;
+            background-color: orange;
+            border: 2px solid;
+            word-spacing: 10px;
+        }
+
+        #orderVlue {
+            position: absolute;
+            top: 380px;
+            color: blue;
+            font-size: 20px;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <table>
+
+
+        <tr>
+            <td>bryani</td>
+            <td>250</td>
+            <td><input type="checkbox" name="" class="dish"></td>
+            <td><input type="number" value="1"></td>
+        </tr>
+
+        <tr>
+            <td>saag</td>
+            <td>300</td>
+            <td><input type="checkbox" name="" class="dish"></td>
+            <td><input type="number" value="1"></td>
+        </tr>
+
+        <tr>
+            <td>mutton</td>
+            <td>400</td>
+            <td><input type="checkbox" name="" class="dish"></td>
+            <td><input type="number" value="1"></td>
+        </tr>
+
+        <tr>
+            <td>chicken pey</td>
+            <td>250</td>
+            <td><input type="checkbox" name="" class="dish"></td>
+            <td><input type="number" value="1"></td>
+        </tr>
+
+        <tr>
+            <td>chicken bryani</td>
+            <td>250</td>
+            <td><input type="checkbox" name="" class="dish"></td>
+            <td><input type="number" value="1"></td>
+        </tr>
+
+
+        <tfoot>
+
+            <tr>
+                <td>
+                    <button id="btn">order Dishes</button>
+                </td>
+            </tr>
+      
+            <td>
+                <button id="btn2">claer Storage</button>
+            </td>
+        </tfoot>
+    </table>
+
+ 
+
+    <div id="oDishes"></div>
+    <div id="netVlue"></div>
+    <div id="contity"></div>
+
+
+
+    <script>
+        // nextElement.sibling
+        //previousElement.sibling
+        //dish.parentNode.preveiousElementsibling.innertext
+       //pesoudo classes
+
+
+
+
+//         let orderDish = JSON.parse(localStorage.getItem('appData') || "[]")
+//         console.log(orderDish);
+
+
+//         let dishes = document.querySelectorAll('.dish');
+
+
+//         function dishFined(dishName) {
+//             return orderDish.find(function (oDish) {
+
+//                 if (oDish.name == dishName) {
+//                     return true;
+//                 }
+
+//             })
+
+//         }
+
+//         dishes.forEach(function (item) {
+
+//             let dishName = item.parentNode.previousElementSibling.previousElementSibling.innerHTML;
+//             let dishFound = dishFined(dishName);
+//             if (dishFound) {
+//                 item.checked = true;
+//             }
+
+
+//         })
+
+
+
+
+
+//         btn.onclick = prosessDishes;
+//         function prosessDishes() {
+//             let dishes = document.getElementsByClassName('dish');
+//             orderDish.length = 0;
+//             oDishes.innerHTML='';
+//             let totalBill = 0;
+//             for (let dish of dishes) {
+
+//                 if (dish.checked) {
+//                     var name = dish.parentNode.previousElementSibling.previousElementSibling.innerHTML;
+//                     totalBill += +dish.parentNode.previousElementSibling.innerText * (dish.parentNode.nextElementSibling.children[0].value);
+//                     var z = dish.parentNode.nextElementSibling.children[0].value;
+//                     oDishes.innerHTML += '<div class="box" ><span id="orderVlue" > ' + name + '(' + z + ')' + '\</span><img  src="' + name + '.jpg" /> </div>'
+
+//                     let totlebill = totalBill;
+
+//                     var orderDishs = {
+//                         name: name,
+//                         bill: totlebill,
+//                         howManyOrder: z
+
+//                     };
+
+//                     orderDish.push(orderDishs);
+
+//                 }
+//                 localStorage.setItem('appData', JSON.stringify(orderDish));
+
+
+//             }
+
+//             let grossbill = totalBill;
+//             let netBill = totalBill
+//             if (totalBill > 600) {
+//                 netBill = totalBill * .90;
+//             }
+//             console.log(netBill);
+//             console.log(grossbill)
+//             netVlue.innerHTML = `<span>Gross_Bill :${grossbill}      <span>     Net_Bill :${netBill}</span></span>  `
+//         }
+
+
+// btn2.onclick=function(){
+//          localStorage.clear();
+//         //  let newitem = document.getElementsByClassName('dish');//class main forEch nahe hota
+//          dishes.forEach(item=>{
+//              item.checked=false;
+//              oDishes.innerHTML='';
+//          })
+
+
+
+//         }
+
+
+
+class Human{
+constructor(name,age){
+this.name=name;
+this.age=age;
+this.weight=0;
+this.gender=null;
+}
+
+eat(){
+
+}
+walk(a){
+    var b=10;
+    var sum = b+a;
+    return sum;
+}
+speak(){
+
+
+}
+}
+
+let h1=new Human("hassan",23); 
+var v=h1.walk(10)
+console.log(v)
+console.log(h1);
+
+    </script>
+</body>
+
+</html>
